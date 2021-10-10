@@ -23,7 +23,8 @@ LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"qdhwcomposer\" -Wno
                                  -Wno-float-conversion -Wno-unused-parameter
 
 ifeq ($(TARGET_USES_QCOM_BSP),true)
-LOCAL_SHARED_LIBRARIES += libhwui
+#LOCAL_STATIC_LIBRARIES += libhwui_static libwebp-encode libwebp-decode
+#LOCAL_SHARED_LIBRARIES += libdng_sdk libpng libjpeg libft2 libGLESv2 libpiex libnativewindow libheif
 ifeq ($(GET_FRAMEBUFFER_FORMAT_FROM_HWC),true)
     LOCAL_CFLAGS += -DGET_FRAMEBUFFER_FORMAT_FROM_HWC
 endif
